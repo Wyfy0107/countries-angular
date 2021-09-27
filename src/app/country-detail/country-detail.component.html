@@ -1,0 +1,16 @@
+<mat-card *ngIf="country">
+  <mat-card-title>{{ country.name }}</mat-card-title>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem"
+        >Region: {{ country.region }}</mat-list-item
+      >
+      <mat-list-item role="listitem"
+        >Population: {{ country.population }}</mat-list-item
+      >
+      <mat-list-item role="listitem"
+        >Language: {{ country.languages[0].name }}</mat-list-item
+      >
+    </mat-list>
+  </mat-card-content>
+</mat-card>

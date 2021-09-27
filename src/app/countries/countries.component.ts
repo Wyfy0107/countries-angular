@@ -20,9 +20,8 @@ export class CountriesComponent implements OnInit {
   constructor(private service: CountriesService) {}
 
   ngOnInit(): void {
-    this.service.getCountries().subscribe((countries) => {
-      console.log('countries', countries);
-      this.countries = countries;
-    });
+    this.service
+      .getCountries()
+      .subscribe((countries) => (this.countries = countries));
   }
 }
