@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { CountriesService } from './countries.service';
 import { Country } from './types';
@@ -9,7 +9,7 @@ import { Country } from './types';
   styleUrls: ['./countries.component.css'],
 })
 export class CountriesComponent implements OnInit {
-  public countries: Country[] = [];
+  @Input() countries: Country[] = [];
   public displayedColumns: string[] = [
     'name',
     'population',
@@ -19,9 +19,5 @@ export class CountriesComponent implements OnInit {
 
   constructor(private service: CountriesService) {}
 
-  ngOnInit(): void {
-    this.service
-      .getCountries()
-      .subscribe((countries) => (this.countries = countries));
-  }
+  ngOnInit(): void {}
 }

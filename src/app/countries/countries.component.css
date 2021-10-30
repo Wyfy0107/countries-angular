@@ -1,15 +1,23 @@
 .mat-column-name {
   width: 25%;
+  text-align: center;
 }
 
 .mat-column-languages {
   width: 25%;
+  text-align: center;
 }
 
 .mat-column-region {
   width: 25%;
+  text-align: center;
 }
 
 .mat-column-population {
   width: 25%;
+  text-align: center;
+}
+
+.mat-table {
+  width: 100vw;
 }
